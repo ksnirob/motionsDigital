@@ -27,7 +27,7 @@ const milestones = [
   { year: '2018', label: 'Studio founded', detail: 'Started as a remote collective building MVPs for emerging founders.' },
   { year: '2020', label: 'Scaled globally', detail: 'Expanded across 4 time zones, formalized discovery & ops practices.' },
   { year: '2022', label: 'Platform era', detail: 'Led multi-year digital transformation programs for enterprise teams.' },
-  { year: '2024', label: 'Today', detail: 'Partner-led teams supporting ambitious companies at seed to Series D.' },
+  { year: '2025', label: 'Today', detail: 'Partner-led teams supporting ambitious companies at seed to Series D.' },
 ]
 
 const leadership = [
@@ -127,7 +127,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6">
+      {/* <section className="px-6">
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             eyebrow="People"
@@ -140,7 +140,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }
