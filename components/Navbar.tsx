@@ -65,7 +65,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link href="/contact">
               <Button size="default" className="bg-black text-white hover:bg-black/90">
-                Book intro
+                Start a project
               </Button>
             </Link>
           </div>

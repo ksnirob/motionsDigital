@@ -4,11 +4,21 @@ import { useState, FormEvent } from 'react'
 import { Send } from 'lucide-react'
 import Button from './Button'
 
+const serviceOptions = [
+  'Web Development',
+  'Web Design',
+  'Mobile App Development',
+  'Inventory Management Systems',
+  'Logo Design',
+  'Banner Design',
+]
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+    service: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -23,7 +33,7 @@ export default function ContactForm() {
     console.log('Form submitted:', formData)
     alert('Thank you for your message! We\'ll get back to you soon.')
     
-    setFormData({ name: '', email: '', company: '', message: '' })
+    setFormData({ name: '', email: '', company: '', service: '', message: '' })
     setIsSubmitting(false)
   }
 
@@ -42,6 +52,28 @@ export default function ContactForm() {
           className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:border-black focus:outline-none transition-all placeholder:text-slate-400 text-slate-900"
           placeholder="Your name"
         />
+      </div>
+
+      <div>
+        <label htmlFor="service" className="block text-sm font-semibold mb-3 text-slate-700">
+          Service needed *
+        </label>
+        <select
+          id="service"
+          required
+          value={formData.service}
+          onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+          className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:border-black focus:outline-none transition-all text-slate-900"
+        >
+          <option value="" disabled>
+            Select a service
+          </option>
+          {serviceOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div>

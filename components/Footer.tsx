@@ -12,7 +12,7 @@ const quickLinks = [
   { label: 'Contact', href: '/contact' },
 ]
 
-const capabilities = ['Product Strategy', 'Web & App Development', 'Experience Design', 'Brand Systems']
+const capabilities = ['Web & App Development', 'Experience Design', 'Brand Systems']
 
 export default function Footer() {
   return (
@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="space-y-8">
               <p className="text-sm uppercase tracking-[0.4em] text-slate-500">Motions Digital</p>
               <h2 className="text-3xl md:text-4xl font-semibold leading-tight text-balance text-slate-900">
-                Crafting expressive software for ambitious founders and brands.
+                Crafting expressive web experiences for ambitious founders and brands.
               </h2>
               <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                 {capabilities.map((item) => (
@@ -80,9 +80,9 @@ export default function Footer() {
           <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs uppercase tracking-[0.3em] text-slate-400">
             <span>© {new Date().getFullYear()} Motions Digital. All rights reserved.</span>
             <div className="flex gap-6">
-              <a href="#">Privacy</a>
-              <a href="#">Terms</a>
-              <a href="#">Cookies</a>
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/terms">Terms</Link>
+              <Link href="/cookies">Cookies</Link>
             </div>
           </div>
         </div>

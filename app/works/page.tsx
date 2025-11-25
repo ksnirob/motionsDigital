@@ -56,7 +56,7 @@ export default function WorksPage() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-semibold leading-tight text-balance text-slate-900"
           >
-            Launches built with obsessive craft, calm collaboration, and measurable business lift.
+            Launches crafted with calm collaboration and measurable lift.
           </motion.h1>
           <p className="text-slate-600 text-lg max-w-3xl mx-auto">
             We partner with founders and product leaders to transform noisy problem statements into elegant, resilient

@@ -56,12 +56,12 @@ export default function AboutPage() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="text-4xl md:text-6xl font-semibold leading-tight text-balance text-slate-900"
           >
-            A strategy-led software studio for founders who want taste and technical confidence in equal measure.
+            A strategy-led web development agency for founders who want taste and technical confidence.
           </motion.h1>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             We are a distributed team of strategists, designers, and engineers combining rigorous systems thinking with an
-            editorial eye for detail. From zero-to-one bets to enterprise-grade rebuilds, we architect the entire product
-            journey.
+            editorial eye for detail. From marketing sites to enterprise-grade platforms, we architect web journeys end to
+            end.
           </p>
         </div>
       </section>

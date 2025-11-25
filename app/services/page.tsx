@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code2, Smartphone, Palette, PenTool, Globe, Zap, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Code2, Smartphone, Palette, PenTool, Image, Boxes, ArrowRight, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
 import Button from '@/components/Button'
 import SectionTitle from '@/components/SectionTitle'
@@ -9,45 +9,45 @@ import SectionTitle from '@/components/SectionTitle'
 const serviceMenu = [
   {
     icon: <Code2 className="w-6 h-6" />,
-    title: 'Web Platforms',
-    copy: 'Enterprise-grade web apps, marketing sites, and resilient platform rebuilds.',
-    bullets: ['System architecture', 'API & integrations', 'Performance engineering'],
-    tech: ['Next.js', 'Remix', 'tRPC', 'Postgres', 'AWS'],
-  },
-  {
-    icon: <Smartphone className="w-6 h-6" />,
-    title: 'Mobile & Devices',
-    copy: 'Native-feeling experiences across iOS, Android, and emerging interfaces.',
-    bullets: ['React Native & Swift', 'Offline-first flows', 'Hardware integrations'],
-    tech: ['React Native', 'SwiftUI', 'Kotlin', 'Expo'],
+    title: 'Web Development',
+    copy: 'Full-stack engineering for marketing sites, SaaS dashboards, and membership platforms.',
+    bullets: ['Custom Next.js builds', 'API & CMS integrations', 'Accessibility + performance audits'],
+    tech: ['Next.js', 'React', 'Node.js', 'WordPress', 'Shopify'],
   },
   {
     icon: <Palette className="w-6 h-6" />,
-    title: 'Experience Design',
-    copy: 'Expressive UI systems, research, and product storytelling for bold brands.',
-    bullets: ['Design language systems', 'Motion & interaction', 'User research'],
+    title: 'Web Design',
+    copy: 'Conversion-driven UX/UI design systems with motion and storytelling baked in.',
+    bullets: ['High-fidelity prototypes', 'Design system documentation', 'Landing page experimentation'],
     tech: ['Figma', 'Framer', 'Spline'],
   },
   {
+    icon: <Smartphone className="w-6 h-6" />,
+    title: 'Mobile App Development',
+    copy: 'Cross-platform mobile apps that mirror your web product and feel native everywhere.',
+    bullets: ['React Native & Swift', 'Offline-first experiences', 'App Store launch support'],
+    tech: ['React Native', 'SwiftUI', 'Kotlin', 'Expo'],
+  },
+  {
+    icon: <Boxes className="w-6 h-6" />,
+    title: 'Inventory Management Systems',
+    copy: 'Operational control towers for tracking stock, orders, and fulfillment in real time.',
+    bullets: ['Warehouse dashboards', 'ERP integrations', 'Automated replenishment alerts'],
+    tech: ['Next.js', 'NestJS', 'Postgres', 'Stripe', 'Supabase'],
+  },
+  {
     icon: <PenTool className="w-6 h-6" />,
-    title: 'Brand & Identity',
-    copy: 'Identity systems, art direction, and launch collateral tied to product strategy.',
-    bullets: ['Naming & verbal', 'Identity suites', 'Campaign design'],
-    tech: ['Cinema4D', 'After Effects', 'Adobe CC'],
+    title: 'Logo Design',
+    copy: 'Identity systems that translate seamlessly from favicon to billboard.',
+    bullets: ['Brand marks & lockups', 'Usage guidelines', 'Launch collateral'],
+    tech: ['Illustrator', 'Cinema4D', 'After Effects'],
   },
   {
-    icon: <Globe className="w-6 h-6" />,
-    title: 'Growth Experience',
-    copy: 'Optimize funnels, onboarding, and monetization through experimentation.',
-    bullets: ['Lifecycle flows', 'Experimentation ops', 'Analytics'],
-    tech: ['Segment', 'LaunchDarkly', 'Mixpanel', 'Looker'],
-  },
-  {
-    icon: <Zap className="w-6 h-6" />,
-    title: 'Advisory & Ops',
-    copy: 'Fractional product leadership to accelerate, scale, or unblock internal teams.',
-    bullets: ['Product audits', 'Hiring & ops', 'Executive workshops'],
-    tech: ['Linear', 'Notion', 'Jira', 'GitHub'],
+    icon: <Image className="w-6 h-6" />,
+    title: 'Banner Design',
+    copy: 'Campaign-ready banners for paid media, product announcements, and newsletters.',
+    bullets: ['Ad set variations', 'Responsive specs', 'Motion-ready files'],
+    tech: ['Figma', 'Photoshop', 'After Effects'],
   },
 ]
 
@@ -77,11 +77,11 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-semibold leading-tight text-balance text-slate-900"
           >
-            Strategy, design, and engineering squads building software with opinion and precision.
+            A web development agency uniting strategy, design, and engineering.
           </motion.h1>
           <p className="text-slate-600 text-lg max-w-3xl mx-auto">
             Choose a single track or assemble a dedicated pod. Every engagement is anchored by partners guiding you from
-            first insight through long-term stewardship.
+            concept through launch-ready web experiences.
           </p>
         </div>
       </section>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             eyebrow="Process"
-            title="We build in tight loops—strategic upfront, fast in execution, calm in delivery."
+            title="We build in tight loops—research upfront, fast dev sprints, calm launches."
             subtitle="Each phase has clear outcomes, rituals, and owners so you always know where we are and what’s next."
           />
           <div className="grid md:grid-cols-4 gap-6">

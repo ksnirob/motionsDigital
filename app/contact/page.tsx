@@ -33,10 +33,11 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-semibold leading-tight text-slate-900"
         >
-          Let’s build something iconic together.
+          Let’s build your next web experience together.
         </motion.h1>
         <p className="text-slate-600 text-lg">
-          Share a few details about your roadmap, and we’ll reply with a tailored team plan within seven days.
+          Share a few details about your web development roadmap, and we’ll reply with a tailored build plan within seven
+          days.
         </p>
       </section>
 
@@ -45,11 +46,11 @@ export default function ContactPage() {
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.4em] text-slate-400">Studio</p>
             <h2 className="text-3xl font-semibold text-slate-900">
-              Distributed team anchored in San Francisco & London working across time zones.
+              Distributed web developers anchored in San Francisco & London, working across time zones.
             </h2>
             <p className="text-slate-600">
-              We take on a limited number of projects per quarter to stay deeply involved. Weekly touchpoints, open
-              channels, and thoughtful documentation keep you close without the noise.
+              We take on a limited number of websites and product builds per quarter to stay deeply involved. Weekly
+              touchpoints, open channels, and thoughtful documentation keep you close without the noise.
             </p>
           </div>
 

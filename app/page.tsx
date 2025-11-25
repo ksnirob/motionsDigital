@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import {
   ArrowUpRight,
   Brain,
+  Boxes,
   CheckCircle2,
   Globe2,
   Layers,
@@ -30,14 +31,14 @@ const services = [
     description: 'System thinking for UI, content, and motion that keeps your brand distinct across surfaces.',
   },
   {
+    icon: Boxes,
+    title: 'Inventory Management Systems',
+    description: 'Custom inventory, warehouse, and order visibility tooling tied into ERPs and retail stacks.',
+  },
+  {
     icon: Brain,
     title: 'Product Strategy',
     description: 'Discovery, roadmaps, and value mapping to de-risk launches before code is written.',
-  },
-  {
-    icon: ServerCog,
-    title: 'Platform Care',
-    description: 'SRE, observability, and lifecycle support so releases stay fast, safe, and measurable.',
   },
 ]
 
@@ -65,14 +66,14 @@ const outcomes = [
 const regions = [
   { name: 'United States', city: 'New York', clients: 24, position: { x: 29.4, y: 27.4 } },
   { name: 'United Kingdom', city: 'London', clients: 15, position: { x: 50, y: 21.4 } },
-  { name: 'United Arab Emirates', city: 'Dubai', clients: 9, position: { x: 65.4, y: 36 } },
+  // { name: 'United Arab Emirates', city: 'Dubai', clients: 9, position: { x: 65.4, y: 36 } },
   { name: 'Singapore', city: 'Singapore', clients: 11, position: { x: 78.8, y: 49.3 } },
-  { name: 'Australia', city: 'Sydney', clients: 7, position: { x: 92, y: 68.9 } },
+  // { name: 'Australia', city: 'Sydney', clients: 7, position: { x: 92, y: 68.9 } },
 ]
 
 const stats = [
   { label: 'Products shipped', value: '64' },
-  { label: 'Countries launched', value: '22' },
+  { label: 'Countries', value: '22' },
   { label: 'Avg. partnership', value: '18 mo' },
 ]
 
@@ -85,13 +86,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
           <div className="space-y-10">
             <div className="space-y-6">
-              <p className="text-xs uppercase tracking-[0.4em] text-slate-400">Software agency</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-slate-400">Web development agency</p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight text-slate-900">
-                Signature software, delivered.
+                Web platforms for ambitious launches.
               </h1>
               <p className="text-lg text-slate-600 max-w-2xl">
-                Motions Digital is the software agency founders call when the roadmap is ambitious and timelines are real.
-                We blend product strategy, interface design, and battle-tested engineering into one accountable team.
+                Motions Digital is the web development agency founders call when they need high-converting marketing sites,
+                resilient web apps, and mobile-ready digital experiences. We blend strategy, design, and senior engineering
+                into one accountable build partner.
               </p>
             </div>
 
@@ -186,9 +188,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <p className="text-xs uppercase tracking-[0.4em] text-slate-400">What we do</p>
-              <h2 className="text-4xl font-semibold text-slate-900 mt-4">Software agency services, end to end.</h2>
+              <h2 className="text-4xl font-semibold text-slate-900 mt-4">Web development services, end to end.</h2>
               <p className="mt-4 text-slate-600 max-w-2xl">
-                Every engagement is led by a partner-level trio so you get the strategic brainpower of a consultancy, the craft of a product studio, and the execution of an engineering team.
+                Every engagement is led by a partner-level trio so you get conversion strategy, expressive UI design, and
+                full-stack development without juggling separate vendors.
               </p>
             </div>
             <Link href="/services" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900">
@@ -217,9 +220,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-16 items-center">
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.4em] text-slate-400">Approach</p>
-            <h2 className="text-4xl font-semibold text-slate-900">A calm, transparent way to deliver software.</h2>
+            <h2 className="text-4xl font-semibold text-slate-900">A calm, transparent way to ship web products.</h2>
             <p className="text-slate-600">
-              We operate like an embedded product team—clear rituals, asynchronous collaboration, and measurable outcomes every week.
+              We operate like an embedded product team—clear rituals, asynchronous collaboration, and measurable outcomes every
+              week across marketing sites, SaaS platforms, and eCommerce builds.
             </p>
             <ul className="space-y-3 text-slate-600">
               {outcomes.map((item) => (
@@ -249,7 +253,8 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.4em] text-slate-400">Presence</p>
               <h2 className="text-4xl font-semibold text-slate-900 mt-4">Global delivery map.</h2>
               <p className="mt-4 text-slate-600 max-w-2xl">
-                Distributed pods collaborate with local partners in key markets. Every dot represents active retainers and launch support.
+                Distributed pods collaborate with local partners in key markets. Every dot represents active retainers for web
+                development, design systems, and product launches.
               </p>
             </div>
             <div className="flex gap-4 text-sm text-slate-600">
@@ -338,7 +343,8 @@ export default function Home() {
             Let’s craft software that feels inevitable to your customers.
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Tell us about your roadmap, the KPIs that matter, and the markets you’re entering—we’ll assemble a team that ships with clarity and care.
+            Tell us about your roadmap, the KPIs that matter, and the experience you want customers to feel—we’ll assemble a
+            web development squad that ships with clarity and care.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
