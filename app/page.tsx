@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import {
   ArrowUpRight,
   Brain,
@@ -17,7 +18,12 @@ import {
 import Link from 'next/link'
 import Button from '@/components/Button'
 
-const clientLogos = ['Stripe Atlas', 'Nectar', 'Beehiv', 'Laravel', 'Segment', 'Xfinity']
+const clientLogos = [
+  { name: 'Floorington', src: '/logo/Floorington.avif' },
+  { name: 'Herts Plumb Fix', src: '/logo/HertsPlumbFix-logo.png' },
+  { name: 'Sixpack Fitness', src: '/logo/sixpack-fitness.png' },
+  { name: 'TH Consulting', src: '/logo/TH-Consulting.png' },
+]
 
 const services = [
   {
@@ -174,12 +180,24 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center gap-8 text-xs uppercase tracking-[0.4em] text-slate-400 justify-center">
-          {clientLogos.map((logo) => (
-            <span key={logo} className="text-slate-500">
-              {logo}
-            </span>
-          ))}
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+          <div className="flex-shrink-0">
+            <p className="text-xs uppercase tracking-[0.4em] text-slate-400 mb-2">Trusted by</p>
+            <h3 className="text-2xl font-semibold text-slate-900">Partners & Clients</h3>
+          </div>
+          <div className="flex flex-wrap items-center gap-8 justify-center">
+            {clientLogos.map((logo) => (
+              <div key={logo.name} className="relative h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300">
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={120}
+                  height={48}
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

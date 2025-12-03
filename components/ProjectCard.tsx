@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 
 interface ProjectCardProps {
@@ -10,6 +11,7 @@ interface ProjectCardProps {
     description: string
     tags: string[]
     year: string
+    image?: string
   }
   index: number
 }
@@ -25,12 +27,25 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       className="group cursor-pointer"
     >
       <div className="rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-[0_30px_90px_rgba(15,23,42,0.08)]">
-        <div className="aspect-video relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-transparent to-transparent opacity-5" />
-          <div className="absolute inset-0 backdrop-grid opacity-5" />
-          <div className="absolute inset-0 flex items-center justify-center text-[140px] font-black text-slate-100 tracking-tight">
-            {project.title.charAt(0)}
-          </div>
+        <div className="aspect-video relative overflow-hidden bg-slate-100">
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-br from-black via-transparent to-transparent opacity-5" />
+              <div className="absolute inset-0 backdrop-grid opacity-5" />
+              <div className="absolute inset-0 flex items-center justify-center text-[140px] font-black text-slate-100 tracking-tight">
+                {project.title.charAt(0)}
+              </div>
+            </>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="absolute top-6 right-6 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg shadow-black/40 group-hover:scale-110">
             <ArrowUpRight className="w-6 h-6" />
           </div>

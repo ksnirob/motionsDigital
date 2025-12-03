@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
@@ -29,14 +30,15 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl pt-6">
         <div className="relative flex items-center justify-between gap-6 rounded-[28px] border border-slate-200/70 bg-white/90 px-4 sm:px-6 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl">
           <div className="absolute inset-0 rounded-[28px] border border-white/60 pointer-events-none" />
-          <Link href="/" className="relative flex items-center gap-3">
-            <div className="h-12 w-12 rounded-full bg-black text-white flex items-center justify-center font-semibold tracking-[0.2em]">
-              MD
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-[0.35em] text-slate-500 block">Motions</span>
-              <span className="text-xl font-semibold text-slate-900">Digital</span>
-            </div>
+          <Link href="/" className="relative flex items-center -m-2">
+            <Image
+              src="/logo.png"
+              alt="Motions Digital"
+              width={120}
+              height={120}
+              className="w-full object-contain"
+              priority
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">

@@ -13,6 +13,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Motions Digital — Future Ready Software Agency',
   description: 'Strategic design and engineering studio crafting bold digital products.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -30,4 +33,6 @@ export default function RootLayout({
     </html>
   )
 }
+
+
 
