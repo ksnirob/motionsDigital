@@ -7,11 +7,11 @@ import Button from '@/components/Button'
 
 const contactInfo = [
   { icon: <Mail className="w-5 h-5" />, label: 'Email', value: 'hello@motionsdigital.com', href: 'mailto:hello@motionsdigital.com' },
-  { icon: <Phone className="w-5 h-5" />, label: 'Phone', value: '+1 (234) 567-890', href: 'tel:+1234567890' },
+  { icon: <Phone className="w-5 h-5" />, label: 'Phone', value: '+88 01830681074', href: 'tel:+8801830681074' },
   {
     icon: <MapPin className="w-5 h-5" />,
     label: 'Studio',
-    value: '123 Innovation Street, San Francisco, CA',
+    value: '9 No, Bijoypath, Dhaka, Bangladesh',
   },
 ]
 
@@ -83,11 +83,11 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          {/* <div className="flex flex-wrap gap-4">
             <Button variant="secondary" className="px-6">
               Download credentials <ArrowUpRight className="w-4 h-4" />
             </Button>
-          </div>
+          </div> */}
         </div>
 
         <div className="rounded-3xl p-8 border border-slate-200 bg-white shadow-[0_25px_80px_rgba(15,23,42,0.08)]">

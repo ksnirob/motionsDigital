@@ -22,19 +22,43 @@ export default function ContactForm() {
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
+    setErrorMessage('')
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We\'ll get back to you soon.')
-    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setSubmitStatus('success')
     setFormData({ name: '', email: '', company: '', service: '', message: '' })
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle')
+      }, 5000)
+    } catch (error) {
+      setSubmitStatus('error')
+      setErrorMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
+    } finally {
     setIsSubmitting(false)
+    }
   }
 
   return (
@@ -119,6 +143,18 @@ export default function ContactForm() {
           placeholder="Tell us about your project..."
         />
       </div>
+
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-50 border border-green-200 rounded-2xl text-green-800 text-sm">
+          ✓ Thank you for your message! We'll get back to you soon.
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-red-800 text-sm">
+          ✗ {errorMessage || 'Something went wrong. Please try again.'}
+        </div>
+      )}
 
       <Button
         type="submit"
