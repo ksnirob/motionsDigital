@@ -16,7 +16,7 @@ export default function Button({
   const baseStyles =
     'inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-full relative overflow-hidden group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500 focus-visible:ring-offset-[var(--bg-primary)]'
 
-  const variantStyles: Record<ButtonProps['variant'], string> = {
+  const variantStyles: Record<NonNullable<ButtonProps['variant']>, string> = {
     primary:
       'bg-black text-white shadow-[0_18px_35px_rgba(15,23,42,0.3)] hover:shadow-[0_24px_45px_rgba(15,23,42,0.35)]',
     secondary:
